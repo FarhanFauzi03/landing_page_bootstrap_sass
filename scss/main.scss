@@ -1,0 +1,79 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap');
+
+// Variables
+$firstColor: #FACF55;
+$secondaryColor: #944B9F;
+$thirdColor: #1A2C4E;
+$forthColor: #F57B47;
+
+// Style
+body {
+    font-family: 'Montserrat', sans-serif;
+    &::before {
+    content: '';
+        background-image: url(../img/bg.png);
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-size: 50vmax;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+// Navbar
+.custom-nav {
+    .navbar-brand {
+        span {
+            color: $secondaryColor;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-left: 2em;
+            margin-top: 1.5em;
+        }
+    }
+
+    #navbarNav {
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    color: $secondaryColor;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    margin-right: 3em;
+                    margin-top: 1.5em;
+                    transition: .3s color ease;
+
+                    &:hover {
+                        color: darken($secondaryColor, 35%);
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 576px) {
+        margin-top: 0em;
+    }
+}
+
+// custom section
+.custom-section {
+    margin-top: 10em;
+    @media screen and (max-width: 567px) {
+        margin-top: 10em;
+    }
+    h2 {
+        font-weight: 500;
+        font-size: 3.5rem;
+        color: $forthColor;
+        white-space: nowrap;
+    }
+    p {
+        font-weight: 400;
+        font-size: 1.5rem;
+        color: $thirdColor;
+    }
+}
